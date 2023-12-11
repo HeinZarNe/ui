@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="flex justify-between items-center bg-slate-100 py-2 px-3">
+      <a class="btn btn text-xl font-semibold">Flavor Wave</a>
+    </div>
+
+    <div class="max-w-screen-lg p-8 mx-auto">
+      <h1 class="text-xl font-semibold my-6">Order List</h1>
+      <!-- Table -->
+      <div class="relative overflow-x-auto">
+        <table
+          class="w-full text-sm text-left rtl:text-right text-gray-500 border border-neutral-100"
+        >
+          <thead class="text-xs text-gray-700 uppercase bg-gray-100">
+            <tr>
+              <th scope="col" class="px-6 py-3">Product name</th>
+              <th scope="col" class="px-6 py-3">Color</th>
+              <th scope="col" class="px-6 py-3">Category</th>
+              <th scope="col" class="px-6 py-3">Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-white border-b hover:bg-neutral-50 cursor-pointer">
+              <a href="./order-detail.html">
+                <th
+                  scope="row"
+                  class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                >
+                  Apple MacBook Pro 17"
+                </th>
+                <td class="px-6 py-4">Silver</td>
+                <td class="px-6 py-4">Laptop</td>
+                <td class="px-6 py-4">$2999</td>
+              </a>
+            </tr>
+
+            <tr class="bg-white border-b hover:bg-neutral-50 cursor-pointer">
+              <th
+                scope="row"
+                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+              >
+                Microsoft Surface Pro
+              </th>
+              <td class="px-6 py-4">White</td>
+              <td class="px-6 py-4">Laptop PC</td>
+              <td class="px-6 py-4">$1999</td>
+            </tr>
+            <tr class="bg-white border-b hover:bg-neutral-50 cursor-pointer">
+              <th
+                scope="row"
+                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+              >
+                Magic Mouse 2
+              </th>
+              <td class="px-6 py-4">Black</td>
+              <td class="px-6 py-4">Accessories</td>
+              <td class="px-6 py-4">$99</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+     
+    </div>
+  </body>
+</html>

@@ -17,499 +17,576 @@
       };
     </script>
   </head>
-  <body class="box-border">
+  <body class="dark:bg-gray-900 antialiased">
     <div class="">
       <!-- Navbar -->
-      <div class="flex justify-between items-center bg-slate-100 py-2 px-3">
-        <div class="flex-1">
-          <a class="btn btn text-xl font-semibold">Flavor Wave</a>
-        </div>
-        <div class="flex items-center justify-center">
-          <button
-            class="btn flex items-center gap-2 flex-row btn-square btn-ghost"
-          >
-            <svg
-              width="23px"
-              height="23px"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M6.29977 5H21L19 12H7.37671M20 16H8L6 3H3M9 20C9 20.5523 8.55228 21 8 21C7.44772 21 7 20.5523 7 20C7 19.4477 7.44772 19 8 19C8.55228 19 9 19.4477 9 20ZM20 20C20 20.5523 19.5523 21 19 21C18.4477 21 18 20.5523 18 20C18 19.4477 18.4477 19 19 19C19.5523 19 20 19.4477 20 20Z"
-                stroke="#000000"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            <!-- If something is in cart , show this -->
-            <!-- <span
-              class="text-sm bg-red-600 text-white w-3 h-3 px-5 py-3 rounded-full flex justify-center items-center"
-              >5</span
-            > -->
-            <span
-              class="text-sm bg-gray-400 text-white w-3 h-3 px-5 py-3 rounded-full flex justify-center items-center"
-              >0</span
-            >
-          </button>
-        </div>
-      </div>
-      <!-- Cart List -->
-      <div class="flex flex-col gap-3 py-3 max-w-screen-lg m-auto">
-        <h1 class="text-2xl font-semibold px-4">Cart List</h1>
+      <nav class="bg-white border-gray-200 dark:bg-gray-800">
         <div
-          class="rounded-lg grid grid-cols-1 gap-4 px-4 mb-20"
+          class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+        >
+          <a
+            href="./index.html"
+            class="flex items-center space-x-3 rtl:space-x-reverse"
+          >
+            <!-- <img
+              src="https://flowbite.com/docs/images/logo.svg"
+              class="h-8"
+              alt="Flowbite Logo"
+            /> -->
+            <span
+              class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+              >Flavor Wave</span
+            >
+          </a>
+
+          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul
+              class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+            >
+              <!-- <li>
+                <a
+                  href="#"
+                  class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
+                  aria-current="page"
+                  >Home</a
+                >
+              </li> -->
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Cart List -->
+      <div class="max-w-screen-lg p-8 mx-auto">
+        <p class="text-xl my-6 text-gray-900 dark:text-white font-semibold">
+          Cart List
+        </p>
+        <div
+          class="rounded-lg grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 px-4 mb-20"
           data-v0-t="card"
         >
           <div
-            class="max-w-[] flex justify-between items-start border-neutral-200 shadow rounded-md border px-4 py-3 hover:bg-slate-100"
+            class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
           >
-            <div class="flex items-center gap-5 w-full">
+            <a href="#">
               <img
+                class="p-8 pb-6 rounded-t-lg"
                 src="https://imgs.search.brave.com/S1oAcnU_vBffi2Fq0lf1c3vh43TU1zCGiDKjn_7w0UY/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9mYWtl/aW1nLnBsLzYwMHg0/MDA"
-                alt="Coffee Image"
-                class="w-24 h-24 rounded-full object-cover"
-                width="200"
-                height="200"
-                style="aspect-ratio: 200 / 200; object-fit: cover"
+                alt="product image"
               />
-              <div class="w-full">
-                <h3 class="tracking-tight text-lg font-semibold">Coffee</h3>
-                <p class="m-0 text-sm font-semibold text-gray-600">
-                  Total Quantity (Boxes) :
-                </p>
-
-                <div class="flex items-center gap-1.5 mt-1 mb-3">
-                  <button
-                    class="px-2 py-1 rounded-sm border border-neutral-200 hover:border-slate-500 text-white"
+            </a>
+            <div class="px-5 pb-5">
+              <a href="#">
+                <h5
+                  class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white"
+                >
+                  Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport
+                </h5>
+              </a>
+              
+              <div class="flex items-center gap-1.5 my-4">
+                <button
+                  type="button"
+                  class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-2 py-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+                >
+                  <svg
+                    width="23px"
+                    height="23px"
+                    viewBox="0 0 24 24"
+                    class="stroke-black dark:stroke-white"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <svg
-                      width="23px"
-                      height="23px"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                      <g
-                        id="SVGRepo_tracerCarrier"
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        d="M6 12L18 12"
+                        stroke-width="2"
                         stroke-linecap="round"
                         stroke-linejoin="round"
-                      ></g>
-                      <g id="SVGRepo_iconCarrier">
-                        <path
-                          d="M6 12L18 12"
-                          stroke="#000000"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        ></path>
-                      </g>
-                    </svg>
-                  </button>
+                      ></path>
+                    </g>
+                  </svg>
+                </button>
 
-                  <input
-                    type="number"
-                    class="border w-full max-w-[100px] border-neutral-200 px-1 py-1"
-                    name=""
-                    value="12"
-                    id=""
-                  />
-                  <button
-                    class="px-2 py-1 rounded-sm border border-neutral-200 hover:border-slate-500 text-white"
+                <input
+                  type="number"
+                  value="1293"
+                  min="0"
+                  id="number-input"
+                  aria-describedby="helper-text-explanation"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="90210"
+                  required
+                />
+                <button
+                  type="button"
+                  class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-2 py-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+                >
+                  <svg
+                    width="23px"
+                    height="23px"
+                    class="stroke-black dark:stroke-white"
+                    viewBox="0 0 24.00 24.00"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <svg
-                      width="23px"
-                      height="23px"
-                      viewBox="0 0 24.00 24.00"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g id="SVGRepo_bgCarrier" stroke-width="0" />
+                    <g id="SVGRepo_bgCarrier" stroke-width="0" />
 
-                      <g
-                        id="SVGRepo_tracerCarrier"
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        d="M6 12H18M12 6V18"
+                        stroke-width="1.7759999999999998"
                         stroke-linecap="round"
                         stroke-linejoin="round"
                       />
-
-                      <g id="SVGRepo_iconCarrier">
-                        <path
-                          d="M6 12H18M12 6V18"
-                          stroke="#000"
-                          stroke-width="1.7759999999999998"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </g>
-                    </svg>
-                  </button>
-                </div>
-
-                <p class="m-0 text-base font-semibold text-gray-600">
-                  Price : <span>$500</span>
-                </p>
+                    </g>
+                  </svg>
+                </button>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-3xl font-bold text-gray-900 dark:text-white"
+                  >$599</span
+                >
+                <a
+                  type="button"
+                  class="cursor-pointer focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
+                  >Remove</a
+                >
               </div>
             </div>
-
-            <button class="text-red-500">
-              <svg
-                color="red"
-                width="20px"
-                height="20px"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M4 6H20M16 6L15.7294 5.18807C15.4671 4.40125 15.3359 4.00784 15.0927 3.71698C14.8779 3.46013 14.6021 3.26132 14.2905 3.13878C13.9376 3 13.523 3 12.6936 3H11.3064C10.477 3 10.0624 3 9.70951 3.13878C9.39792 3.26132 9.12208 3.46013 8.90729 3.71698C8.66405 4.00784 8.53292 4.40125 8.27064 5.18807L8 6M18 6V16.2C18 17.8802 18 18.7202 17.673 19.362C17.3854 19.9265 16.9265 20.3854 16.362 20.673C15.7202 21 14.8802 21 13.2 21H10.8C9.11984 21 8.27976 21 7.63803 20.673C7.07354 20.3854 6.6146 19.9265 6.32698 19.362C6 18.7202 6 17.8802 6 16.2V6M14 10V17M10 10V17"
-                  stroke="#ff2d2d"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </button>
           </div>
           <div
-            class="flex justify-between items-start border-neutral-200 shadow rounded-md border px-4 py-3 cursor-pointer hover:bg-slate-100"
+            class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
           >
-            <div class="flex items-center gap-5 w-full">
+            <a href="#">
               <img
+                class="p-8 pb-6 rounded-t-lg"
                 src="https://imgs.search.brave.com/S1oAcnU_vBffi2Fq0lf1c3vh43TU1zCGiDKjn_7w0UY/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9mYWtl/aW1nLnBsLzYwMHg0/MDA"
-                alt="Coffee Image"
-                class="w-24 h-24 rounded-full object-cover"
-                width="200"
-                height="200"
-                style="aspect-ratio: 200 / 200; object-fit: cover"
+                alt="product image"
               />
-              <div class="">
-                <h3 class="tracking-tight text-lg font-semibold">Coffee</h3>
-                <p class="m-0 text-sm font-semibold text-gray-600">
-                  Total Quantity (Boxes) :
-                </p>
-
-                <div class="flex items-center gap-1.5 mt-1 mb-3">
-                  <button
-                    class="px-2 py-1 rounded-sm border border-neutral-200 hover:border-slate-500 text-white"
+            </a>
+            <div class="px-5 pb-5">
+              <a href="#">
+                <h5
+                  class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white"
+                >
+                  Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport
+                </h5>
+              </a>
+              
+              <div class="flex items-center gap-1.5 my-4">
+                <button
+                  type="button"
+                  class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-2 py-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+                >
+                  <svg
+                    width="23px"
+                    height="23px"
+                    viewBox="0 0 24 24"
+                    class="stroke-black dark:stroke-white"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <svg
-                      width="23px"
-                      height="23px"
-                      viewBox="0 0 24.00 24.00"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g id="SVGRepo_bgCarrier" stroke-width="0" />
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        d="M6 12L18 12"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </g>
+                  </svg>
+                </button>
 
-                      <g
-                        id="SVGRepo_tracerCarrier"
+                <input
+                  type="number"
+                  value="1293"
+                  min="0"
+                  id="number-input"
+                  aria-describedby="helper-text-explanation"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="90210"
+                  required
+                />
+                <button
+                  type="button"
+                  class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-2 py-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+                >
+                  <svg
+                    width="23px"
+                    height="23px"
+                    class="stroke-black dark:stroke-white"
+                    viewBox="0 0 24.00 24.00"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        d="M6 12H18M12 6V18"
+                        stroke-width="1.7759999999999998"
                         stroke-linecap="round"
                         stroke-linejoin="round"
                       />
-
-                      <g id="SVGRepo_iconCarrier">
-                        <path
-                          d="M6 12H18M12 6V18"
-                          stroke="#000"
-                          stroke-width="1.7759999999999998"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </g>
-                    </svg>
-                  </button>
-                  <input
-                    type="number"
-                    class="border w-24 border-neutral-200 px-1 py-1"
-                    name=""
-                    value="12"
-                    id=""
-                  />
-                  <button
-                    class="px-2 py-1 rounded-sm border border-neutral-200 hover:border-slate-500 text-white"
-                  >
-                    <svg
-                      width="23px"
-                      height="23px"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                      <g
-                        id="SVGRepo_tracerCarrier"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></g>
-                      <g id="SVGRepo_iconCarrier">
-                        <path
-                          d="M6 12L18 12"
-                          stroke="#000000"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        ></path>
-                      </g>
-                    </svg>
-                  </button>
-                </div>
-
-                <p class="m-0 text-base font-semibold text-gray-600">
-                  Price : <span>$500</span>
-                </p>
+                    </g>
+                  </svg>
+                </button>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-3xl font-bold text-gray-900 dark:text-white"
+                  >$599</span
+                >
+                <a
+                  type="button"
+                  class="cursor-pointer focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
+                  >Remove</a
+                >
               </div>
             </div>
-
-            <button class="text-red-500">
-              <svg
-                color="red"
-                width="20px"
-                height="20px"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M4 6H20M16 6L15.7294 5.18807C15.4671 4.40125 15.3359 4.00784 15.0927 3.71698C14.8779 3.46013 14.6021 3.26132 14.2905 3.13878C13.9376 3 13.523 3 12.6936 3H11.3064C10.477 3 10.0624 3 9.70951 3.13878C9.39792 3.26132 9.12208 3.46013 8.90729 3.71698C8.66405 4.00784 8.53292 4.40125 8.27064 5.18807L8 6M18 6V16.2C18 17.8802 18 18.7202 17.673 19.362C17.3854 19.9265 16.9265 20.3854 16.362 20.673C15.7202 21 14.8802 21 13.2 21H10.8C9.11984 21 8.27976 21 7.63803 20.673C7.07354 20.3854 6.6146 19.9265 6.32698 19.362C6 18.7202 6 17.8802 6 16.2V6M14 10V17M10 10V17"
-                  stroke="#ff2d2d"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </button>
           </div>
           <div
-            class="flex justify-between items-start border-neutral-200 shadow rounded-md border px-4 py-3 cursor-pointer hover:bg-slate-100"
+            class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
           >
-            <div class="flex items-center gap-5 w-full">
+            <a href="#">
               <img
+                class="p-8 pb-6 rounded-t-lg"
                 src="https://imgs.search.brave.com/S1oAcnU_vBffi2Fq0lf1c3vh43TU1zCGiDKjn_7w0UY/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9mYWtl/aW1nLnBsLzYwMHg0/MDA"
-                alt="Coffee Image"
-                class="w-24 h-24 rounded-full object-cover"
-                width="200"
-                height="200"
-                style="aspect-ratio: 200 / 200; object-fit: cover"
+                alt="product image"
               />
-              <div class="">
-                <h3 class="tracking-tight text-lg font-semibold">Coffee</h3>
-                <p class="m-0 text-sm font-semibold text-gray-600">
-                  Total Quantity (Boxes) :
-                </p>
-
-                <div class="flex items-center gap-1.5 mt-1 mb-3">
-                  <button
-                    class="px-2 py-1 rounded-sm border border-neutral-200 hover:border-slate-500 text-white"
+            </a>
+            <div class="px-5 pb-5">
+              <a href="#">
+                <h5
+                  class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white"
+                >
+                  Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport
+                </h5>
+              </a>
+              
+              <div class="flex items-center gap-1.5 my-4">
+                <button
+                  type="button"
+                  class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-2 py-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+                >
+                  <svg
+                    width="23px"
+                    height="23px"
+                    viewBox="0 0 24 24"
+                    class="stroke-black dark:stroke-white"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <svg
-                      width="23px"
-                      height="23px"
-                      viewBox="0 0 24.00 24.00"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g id="SVGRepo_bgCarrier" stroke-width="0" />
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        d="M6 12L18 12"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </g>
+                  </svg>
+                </button>
 
-                      <g
-                        id="SVGRepo_tracerCarrier"
+                <input
+                  type="number"
+                  value="1293"
+                  min="0"
+                  id="number-input"
+                  aria-describedby="helper-text-explanation"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="90210"
+                  required
+                />
+                <button
+                  type="button"
+                  class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-2 py-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+                >
+                  <svg
+                    width="23px"
+                    height="23px"
+                    class="stroke-black dark:stroke-white"
+                    viewBox="0 0 24.00 24.00"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        d="M6 12H18M12 6V18"
+                        stroke-width="1.7759999999999998"
                         stroke-linecap="round"
                         stroke-linejoin="round"
                       />
-
-                      <g id="SVGRepo_iconCarrier">
-                        <path
-                          d="M6 12H18M12 6V18"
-                          stroke="#000"
-                          stroke-width="1.7759999999999998"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </g>
-                    </svg>
-                  </button>
-                  <input
-                    type="number"
-                    class="border w-20 border-neutral-200 px-1 py-1"
-                    name=""
-                    value="12"
-                    id=""
-                  />
-                  <button
-                    class="px-2 py-1 rounded-sm border border-neutral-200 hover:border-slate-500 text-white"
-                  >
-                    <svg
-                      width="23px"
-                      height="23px"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                      <g
-                        id="SVGRepo_tracerCarrier"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></g>
-                      <g id="SVGRepo_iconCarrier">
-                        <path
-                          d="M6 12L18 12"
-                          stroke="#000000"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        ></path>
-                      </g>
-                    </svg>
-                  </button>
-                </div>
-
-                <p class="m-0 text-base font-semibold text-gray-600">
-                  Price : <span>$500</span>
-                </p>
+                    </g>
+                  </svg>
+                </button>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-3xl font-bold text-gray-900 dark:text-white"
+                  >$599</span
+                >
+                <a
+                  type="button"
+                  class="cursor-pointer focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
+                  >Remove</a
+                >
               </div>
             </div>
-
-            <button class="text-red-500">
-              <svg
-                color="red"
-                width="20px"
-                height="20px"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M4 6H20M16 6L15.7294 5.18807C15.4671 4.40125 15.3359 4.00784 15.0927 3.71698C14.8779 3.46013 14.6021 3.26132 14.2905 3.13878C13.9376 3 13.523 3 12.6936 3H11.3064C10.477 3 10.0624 3 9.70951 3.13878C9.39792 3.26132 9.12208 3.46013 8.90729 3.71698C8.66405 4.00784 8.53292 4.40125 8.27064 5.18807L8 6M18 6V16.2C18 17.8802 18 18.7202 17.673 19.362C17.3854 19.9265 16.9265 20.3854 16.362 20.673C15.7202 21 14.8802 21 13.2 21H10.8C9.11984 21 8.27976 21 7.63803 20.673C7.07354 20.3854 6.6146 19.9265 6.32698 19.362C6 18.7202 6 17.8802 6 16.2V6M14 10V17M10 10V17"
-                  stroke="#ff2d2d"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </button>
           </div>
           <div
-            class="flex justify-between items-start border-neutral-200 shadow rounded-md border px-4 py-3 cursor-pointer hover:bg-slate-100"
+            class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
           >
-            <div class="flex items-center gap-5 w-full">
+            <a href="#">
               <img
+                class="p-8 pb-6 rounded-t-lg"
                 src="https://imgs.search.brave.com/S1oAcnU_vBffi2Fq0lf1c3vh43TU1zCGiDKjn_7w0UY/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9mYWtl/aW1nLnBsLzYwMHg0/MDA"
-                alt="Coffee Image"
-                class="w-24 h-24 rounded-full object-cover"
-                width="200"
-                height="200"
-                style="aspect-ratio: 200 / 200; object-fit: cover"
+                alt="product image"
               />
-              <div class="">
-                <h3 class="tracking-tight text-lg font-semibold">Coffee</h3>
-                <p class="m-0 text-sm font-semibold text-gray-600">
-                  Total Quantity (Boxes) :
-                </p>
-
-                <div class="flex items-center gap-1.5 mt-1 mb-3">
-                  <button
-                    class="px-2 py-1 rounded-sm border border-neutral-200 hover:border-slate-500 text-white"
+            </a>
+            <div class="px-5 pb-5">
+              <a href="#">
+                <h5
+                  class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white"
+                >
+                  Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport
+                </h5>
+              </a>
+              
+              <div class="flex items-center gap-1.5 my-4">
+                <button
+                  type="button"
+                  class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-2 py-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+                >
+                  <svg
+                    width="23px"
+                    height="23px"
+                    viewBox="0 0 24 24"
+                    class="stroke-black dark:stroke-white"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <svg
-                      width="23px"
-                      height="23px"
-                      viewBox="0 0 24.00 24.00"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g id="SVGRepo_bgCarrier" stroke-width="0" />
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        d="M6 12L18 12"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </g>
+                  </svg>
+                </button>
 
-                      <g
-                        id="SVGRepo_tracerCarrier"
+                <input
+                  type="number"
+                  value="1293"
+                  min="0"
+                  id="number-input"
+                  aria-describedby="helper-text-explanation"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="90210"
+                  required
+                />
+                <button
+                  type="button"
+                  class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-2 py-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+                >
+                  <svg
+                    width="23px"
+                    height="23px"
+                    class="stroke-black dark:stroke-white"
+                    viewBox="0 0 24.00 24.00"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        d="M6 12H18M12 6V18"
+                        stroke-width="1.7759999999999998"
                         stroke-linecap="round"
                         stroke-linejoin="round"
                       />
-
-                      <g id="SVGRepo_iconCarrier">
-                        <path
-                          d="M6 12H18M12 6V18"
-                          stroke="#000"
-                          stroke-width="1.7759999999999998"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </g>
-                    </svg>
-                  </button>
-                  <input
-                    type="number"
-                    class="border w-24 border-neutral-200 px-1 py-1"
-                    name=""
-                    value="12"
-                    id=""
-                  />
-                  <button
-                    class="px-2 py-1 rounded-sm border border-neutral-200 hover:border-slate-500 text-white"
-                  >
-                    <svg
-                      width="23px"
-                      height="23px"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                      <g
-                        id="SVGRepo_tracerCarrier"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></g>
-                      <g id="SVGRepo_iconCarrier">
-                        <path
-                          d="M6 12L18 12"
-                          stroke="#000000"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        ></path>
-                      </g>
-                    </svg>
-                  </button>
-                </div>
-
-                <p class="m-0 text-base font-semibold text-gray-600">
-                  Price : <span>$500</span>
-                </p>
+                    </g>
+                  </svg>
+                </button>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-3xl font-bold text-gray-900 dark:text-white"
+                  >$599</span
+                >
+                <a
+                  type="button"
+                  class="cursor-pointer focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
+                  >Remove</a
+                >
               </div>
             </div>
+          </div>
+          <div
+            class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+          >
+            <a href="#">
+              <img
+                class="p-8 pb-6 rounded-t-lg"
+                src="https://imgs.search.brave.com/S1oAcnU_vBffi2Fq0lf1c3vh43TU1zCGiDKjn_7w0UY/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9mYWtl/aW1nLnBsLzYwMHg0/MDA"
+                alt="product image"
+              />
+            </a>
+            <div class="px-5 pb-5">
+              <a href="#">
+                <h5
+                  class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white"
+                >
+                  Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport
+                </h5>
+              </a>
+              
+              <div class="flex items-center gap-1.5 my-4">
+                <button
+                  type="button"
+                  class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-2 py-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+                >
+                  <svg
+                    width="23px"
+                    height="23px"
+                    viewBox="0 0 24 24"
+                    class="stroke-black dark:stroke-white"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        d="M6 12L18 12"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </g>
+                  </svg>
+                </button>
 
-            <button class="text-red-500">
-              <svg
-                color="red"
-                width="20px"
-                height="20px"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M4 6H20M16 6L15.7294 5.18807C15.4671 4.40125 15.3359 4.00784 15.0927 3.71698C14.8779 3.46013 14.6021 3.26132 14.2905 3.13878C13.9376 3 13.523 3 12.6936 3H11.3064C10.477 3 10.0624 3 9.70951 3.13878C9.39792 3.26132 9.12208 3.46013 8.90729 3.71698C8.66405 4.00784 8.53292 4.40125 8.27064 5.18807L8 6M18 6V16.2C18 17.8802 18 18.7202 17.673 19.362C17.3854 19.9265 16.9265 20.3854 16.362 20.673C15.7202 21 14.8802 21 13.2 21H10.8C9.11984 21 8.27976 21 7.63803 20.673C7.07354 20.3854 6.6146 19.9265 6.32698 19.362C6 18.7202 6 17.8802 6 16.2V6M14 10V17M10 10V17"
-                  stroke="#ff2d2d"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                <input
+                  type="number"
+                  value="1293"
+                  min="0"
+                  id="number-input"
+                  aria-describedby="helper-text-explanation"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="90210"
+                  required
                 />
-              </svg>
-            </button>
+                <button
+                  type="button"
+                  class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-2 py-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+                >
+                  <svg
+                    width="23px"
+                    height="23px"
+                    class="stroke-black dark:stroke-white"
+                    viewBox="0 0 24.00 24.00"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        d="M6 12H18M12 6V18"
+                        stroke-width="1.7759999999999998"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                  </svg>
+                </button>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-3xl font-bold text-gray-900 dark:text-white"
+                  >$599</span
+                >
+                <a
+                  type="button"
+                  class="cursor-pointer focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
+                  >Remove</a
+                >
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="flex flex-row gap-4 fixed items-center bottom-7 right-5">
-          <p
-            class="bg-white rounded-lg w-fit border px-5 border-slate-700 py-2 text-md font-semibold text-gray-700"
+          <button
+            type="button"
+            class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-xl px-5 py-2.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
           >
             Total : <span class="font-bold">$99</span>
-          </p>
+          </button>
 
           <button
-            class="border-white border ml-auto flex items-center justify-center text-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-background hover:bg-blue-800 h-11 rounded-md px-8 bg-blue-500 text-white"
+            type="button"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xl px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
           >
             Order Now
           </button>

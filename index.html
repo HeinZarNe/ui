@@ -17,76 +17,187 @@
       };
     </script>
   </head>
-  <body class="box-border">
+  <body class="dark:bg-gray-900 antialiased">
     <div class="">
       <!-- Navbar -->
-      <div class="flex justify-between items-center bg-slate-100 py-2 px-3">
-        <div class="flex-1">
-          <a class="btn btn text-xl font-semibold">Flavor Wave</a>
-        </div>
-        <div class="flex items-center justify-center">
-          <a href="distributor/">
-            <button
-              class="btn flex items-center gap-2 flex-row btn-square btn-ghost"
-            >
-              <svg
-                width="23px"
-                height="23px"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M6.29977 5H21L19 12H7.37671M20 16H8L6 3H3M9 20C9 20.5523 8.55228 21 8 21C7.44772 21 7 20.5523 7 20C7 19.4477 7.44772 19 8 19C8.55228 19 9 19.4477 9 20ZM20 20C20 20.5523 19.5523 21 19 21C18.4477 21 18 20.5523 18 20C18 19.4477 18.4477 19 19 19C19.5523 19 20 19.4477 20 20Z"
-                  stroke="#000000"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-              <!-- If something is in cart , show this -->
-              <!-- <span
-              class="text-sm bg-red-600 text-white w-3 h-3 px-5 py-3 rounded-full flex justify-center items-center"
-              >5</span
-            > -->
-              <span
-                class="text-sm bg-gray-400 text-white w-3 h-3 px-5 py-3 rounded-full flex justify-center items-center"
-                >0</span
-              >
-            </button>
-          </a>
-        </div>
-      </div>
-      <!-- Product List -->
-      <div class="flex flex-col gap-3 py-3 px-3 md:px-5 max-w-screen-lg m-auto">
-        <h1 class="text-2xl font-semibold px-4">Product List</h1>
+      <nav class="bg-white border-gray-200 dark:bg-gray-800">
         <div
-          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+          class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+        >
+          <a
+            href="./index.html"
+            class="flex items-center space-x-3 rtl:space-x-reverse"
+          >
+            <!-- <img
+              src="https://flowbite.com/docs/images/logo.svg"
+              class="h-8"
+              alt="Flowbite Logo"
+            /> -->
+            <span
+              class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+              >Flavor Wave</span
+            >
+          </a>
+
+          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0  dark:bg-gray-800 dark:border-gray-800">
+              <li class="text-black dark:text-white">
+                Cart -
+                <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">0</span>
+              </li>
+              </li> 
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Cart List -->
+      <div class="max-w-screen-lg p-8 mx-auto">
+        <p class="text-xl my-6 text-gray-900 dark:text-white font-semibold">
+          Product List
+        </p>
+        <div
+          class="rounded-lg grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 px-4 mb-20"
           data-v0-t="card"
         >
-          <a href="./distributor/product-detail.html" class="">
-            <div
-              class="flex border-neutral-200 shadow rounded-md border md:flex-col flex-row items-center px-4 py-3 cursor-pointer hover:bg-slate-100"
-            >
+          <div
+            class="cursor-pointer w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+          >
+            <a href="#">
               <img
+                class="p-8 pb-6 rounded-t-lg"
                 src="https://imgs.search.brave.com/S1oAcnU_vBffi2Fq0lf1c3vh43TU1zCGiDKjn_7w0UY/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9mYWtl/aW1nLnBsLzYwMHg0/MDA"
-                alt="Coffee Image"
-                class="w-24 h-24 rounded-full object-cover"
-                width="200"
-                height="200"
-                style="aspect-ratio: 200 / 200; object-fit: cover"
+                alt="product image"
               />
-              <div>
-                <h3 class="tracking-tight text-lg font-semibold">Coffee</h3>
-                <p class="m-0 text-sm font-semibold text-gray-700">
-                  Avalible Boxes : <span>1000</span>
-                </p>
-                <p class="m-0 text-sm font-semibold text-gray-700">
-                  Price : <span>$34</span>
-                </p>
+            </a>
+            <div class="px-5 pb-5">
+              <a href="#">
+                <h5
+                  class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white"
+                >
+                  Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport
+                </h5>
+              </a>
+
+              <div class="mt-5">
+                <span class="text-3xl font-bold text-gray-900 dark:text-white"
+                  >$599</span
+                >
               </div>
             </div>
-          </a>
+          </div>
+          <div
+            class="cursor-pointer w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+          >
+            <a href="#">
+              <img
+                class="p-8 pb-6 rounded-t-lg"
+                src="https://imgs.search.brave.com/S1oAcnU_vBffi2Fq0lf1c3vh43TU1zCGiDKjn_7w0UY/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9mYWtl/aW1nLnBsLzYwMHg0/MDA"
+                alt="product image"
+              />
+            </a>
+            <div class="px-5 pb-5">
+              <a href="#">
+                <h5
+                  class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white"
+                >
+                  Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport
+                </h5>
+              </a>
+
+              <div class="mt-5">
+                <span class="text-3xl font-bold text-gray-900 dark:text-white"
+                  >$599</span
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="cursor-pointer w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+          >
+            <a href="#">
+              <img
+                class="p-8 pb-6 rounded-t-lg"
+                src="https://imgs.search.brave.com/S1oAcnU_vBffi2Fq0lf1c3vh43TU1zCGiDKjn_7w0UY/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9mYWtl/aW1nLnBsLzYwMHg0/MDA"
+                alt="product image"
+              />
+            </a>
+            <div class="px-5 pb-5">
+              <a href="#">
+                <h5
+                  class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white"
+                >
+                  Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport
+                </h5>
+              </a>
+
+              <div class="mt-5">
+                <span class="text-3xl font-bold text-gray-900 dark:text-white"
+                  >$599</span
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="cursor-pointer w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+          >
+            <a href="#">
+              <img
+                class="p-8 pb-6 rounded-t-lg"
+                src="https://imgs.search.brave.com/S1oAcnU_vBffi2Fq0lf1c3vh43TU1zCGiDKjn_7w0UY/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9mYWtl/aW1nLnBsLzYwMHg0/MDA"
+                alt="product image"
+              />
+            </a>
+            <div class="px-5 pb-5">
+              <a href="#">
+                <h5
+                  class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white"
+                >
+                  Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport
+                </h5>
+              </a>
+
+              <div class="mt-5">
+                <span class="text-3xl font-bold text-gray-900 dark:text-white"
+                  >$599</span
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="cursor-pointer w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+          >
+            <a href="#">
+              <img
+                class="p-8 pb-6 rounded-t-lg"
+                src="https://imgs.search.brave.com/S1oAcnU_vBffi2Fq0lf1c3vh43TU1zCGiDKjn_7w0UY/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9mYWtl/aW1nLnBsLzYwMHg0/MDA"
+                alt="product image"
+              />
+            </a>
+            <div class="px-5 pb-5">
+              <a href="#">
+                <h5
+                  class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white"
+                >
+                  Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport
+                </h5>
+              </a>
+
+              <div class="mt-5">
+                <span class="text-3xl font-bold text-gray-900 dark:text-white"
+                  >$599</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-row gap-4 fixed items-center bottom-7 right-5">
+          <button
+            type="button"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xl px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+          >
+            Order Now
+          </button>
         </div>
       </div>
     </div>

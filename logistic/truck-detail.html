@@ -25,19 +25,54 @@
           };
         </script>
       </head>
-      <body>
+      <body class="dark:bg-gray-900 antialiased">
         <!-- Navbar -->
-        <div class="flex justify-between items-center bg-slate-100 py-2 px-3">
-          <a class="btn btn text-xl font-semibold">Flavor Wave</a>
-        </div>
+        <nav class="bg-white border-gray-200 dark:bg-gray-800">
+          <div
+            class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+          >
+            <a
+              href="./index.html"
+              class="flex items-center space-x-3 rtl:space-x-reverse"
+            >
+              <!-- <img
+                src="https://flowbite.com/docs/images/logo.svg"
+                class="h-8"
+                alt="Flowbite Logo"
+              /> -->
+              <span
+                class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+                >Flavor Wave</span
+              >
+            </a>
+
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+              <ul
+                class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+              >
+                <!-- <li>
+                  <a
+                    href="#"
+                    class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
+                    aria-current="page"
+                    >Home</a
+                  >
+                </li> -->
+              </ul>
+            </div>
+          </div>
+        </nav>
 
         <div class="max-w-screen-lg p-8 mx-auto">
           <div class="flex flex-row justify-between items-center">
-            <h1 class="text-xl font-semibold my-6">Assigned Order List</h1>
+            <p class="text-xl my-6 text-gray-900 dark:text-white font-semibold">
+              Assigned Order List
+            </p>
+
             <div class="flex flex-row gap-3">
               <select
                 id="countries"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5 focus-visible:outline-none"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               >
                 <option selected disabled>Change truck status</option>
                 <option value="US">Unassigned</option>
@@ -47,11 +82,13 @@
             </div>
           </div>
           <!-- Table -->
-          <div class="relative overflow-x-auto">
+          <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
             <table
-              class="w-full text-sm text-left rtl:text-right text-gray-500 border border-neutral-100"
+              class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400"
             >
-              <thead class="text-xs text-gray-700 uppercase bg-gray-100">
+              <thead
+                class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+              >
                 <tr>
                   <th scope="col" class="px-6 py-3">Product name</th>
                   <th scope="col" class="px-6 py-3">Color</th>
@@ -62,11 +99,11 @@
               </thead>
               <tbody>
                 <tr
-                  class="bg-white border-b hover:bg-neutral-50 cursor-pointer"
+                  class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
                 >
                   <th
                     scope="row"
-                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                   >
                     Apple MacBook Pro 17"
                   </th>
@@ -76,18 +113,18 @@
                   <td class="px-6 py-4">
                     <button
                       type="button"
-                      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2"
+                      class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
                     >
                       Delivered
                     </button>
                   </td>
                 </tr>
                 <tr
-                  class="bg-white border-b hover:bg-neutral-50 cursor-pointer"
+                  class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
                 >
                   <th
                     scope="row"
-                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                   >
                     Microsoft Surface Pro
                   </th>
@@ -97,24 +134,32 @@
                   <td class="px-6 py-4">
                     <button
                       type="button"
-                      class="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-500 focus:outline-none bg-neutral-100 rounded-lg border border-gray-200 hover:bg-gray-100 focus:z-10 focus:ring-4 focus:ring-gray-200"
+                      class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
                     >
                       Delivered
                     </button>
                   </td>
                 </tr>
                 <tr
-                  class="bg-white border-b hover:bg-neutral-50 cursor-pointer"
+                  class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600"
                 >
                   <th
                     scope="row"
-                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                   >
                     Magic Mouse 2
                   </th>
                   <td class="px-6 py-4">Black</td>
                   <td class="px-6 py-4">Accessories</td>
                   <td class="px-6 py-4">$99</td>
+                  <td class="px-6 py-4">
+                    <button
+                      type="button"
+                      class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+                    >
+                      Delivered
+                    </button>
+                  </td>
                 </tr>
               </tbody>
             </table>
